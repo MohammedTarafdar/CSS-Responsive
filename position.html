@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-position</title>
+    
+    <style>
+        h1{
+            font-size: 36px;
+            color: blueviolet;
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            height: 500px;
+            
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(85, 34, 34);
+        }
+        .box-2 {
+            position: relative;
+            top: 200px;
+        }
+        
+        .box-4{
+            position: relative;
+            top: 200px;
+        }
+
+        .box p{
+            color: white;
+        }
+
+        /* New Section */
+        
+        .container-two{
+            height: 500px;
+        }
+        
+        .new-box{
+            position: absolute;
+        }
+
+        .new-box-1{
+            height: 400px;
+            width: 400px;
+            background-color: violet;
+        }
+        .new-box-2{
+            height: 300px;
+            width: 300px;
+            background-color: turquoise;
+        }
+        .new-box-3{
+            height: 200px;
+            width: 200px;
+            background-color: tomato;
+        }
+        .container-two .new-box-1:hover{
+            transform: rotate(30deg);
+            transition: transform 2s;
+        } 
+        .container-two .new-box-2:hover{
+            transform: scale(1.5);
+            transition: transform 2s;
+        } 
+        .container-two .new-box-3:hover{
+            transform: skew(-30deg);
+            transition: transform 2s;
+        } 
+        /* Photo Albam */
+        .photo-albam{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .photo-frame{
+            height: 200px;
+            width: 300px;
+            border: 5px solid goldenrod;
+            border-radius: 5px;
+            position: relative;
+            margin: 10px;
+        }
+        .photo-frame .photo img{
+            height: 200px;
+            width: 100%;
+        }
+        .photo-detail{
+            position: absolute;
+            height: 200px;
+            width: 300px;
+            top: 0px;
+            display: none;
+        }
+
+        .photo-frame:hover .photo-detail {
+            display: block;
+            color: white;
+        }
+        .photo-frame:hover .photo-detail h4{
+            background-color: rgba(218, 165, 32, 0.75);
+            text-align: center;
+            color: rgb(61, 59, 59);
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>CSS Position</h1>
+    <H3>More about css position</H3>
+    <section class="container">
+        <div class="box box-1">
+            <p>I am box 1</p>
+        </div>
+        <div class="box box-2">
+            <p>I am box 2</p>
+        </div>
+        <div class="box box-3">
+            <p>I am box 3</p>
+        </div>
+        <div class="box box-4">
+            <p>I am box 4</p>
+        </div>
+    </section> <hr>
+        <h1>New Section</h1>
+    <section class="container-two">
+        <div class=" new-box new-box-1"></div>
+        <div class=" new-box new-box-2"></div>
+        <div class=" new-box new-box-3"></div>
+    </section > <hr>
+
+    <section >
+        <h1>Photo Albam</h1>
+        <div class="photo-albam">
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/mango.jpg" alt="lots-of-mango">
+            </div>
+            <div class="photo-detail">
+                <h4>Red Mango</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, doloribus? Nam eos adipisci, animi, harum necessitatibus laboriosam nihil amet velit in omnis qui maiores maxime sunt.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/mango-1.jpg" alt="lots-of-mango">
+            </div>
+            <div class="photo-detail">
+                <h4>Red Mango</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, doloribus? Nam eos adipisci, animi, harum necessitatibus laboriosam nihil amet velit in omnis qui maiores maxime sunt.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/mango-2.jpg" alt="lots-of-mango">
+            </div>
+            <div class="photo-detail">
+                <h4>Red Mango</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, doloribus? Nam eos adipisci, animi, harum necessitatibus laboriosam nihil amet velit in omnis qui maiores maxime sunt.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/mango.jpg" alt="lots-of-mango">
+            </div>
+            <div class="photo-detail">
+                <h4>Red Mango</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, doloribus? Nam eos adipisci, animi, harum necessitatibus laboriosam nihil amet velit in omnis qui maiores maxime sunt.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/mango-1.jpg" alt="lots-of-mango">
+            </div>
+            <div class="photo-detail">
+                <h4>Red Mango</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, doloribus? Nam eos adipisci, animi, harum necessitatibus laboriosam nihil amet velit in omnis qui maiores maxime sunt.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/mango-2.jpg" alt="lots-of-mango">
+            </div>
+            <div class="photo-detail">
+                <h4>Red Mango</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, doloribus? Nam eos adipisci, animi, harum necessitatibus laboriosam nihil amet velit in omnis qui maiores maxime sunt.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/mango.jpg" alt="lots-of-mango">
+            </div>
+            <div class="photo-detail">
+                <h4>Red Mango</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, doloribus? Nam eos adipisci, animi, harum necessitatibus laboriosam nihil amet velit in omnis qui maiores maxime sunt.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/mango-1.jpg" alt="lots-of-mango">
+            </div>
+            <div class="photo-detail">
+                <h4>Red Mango</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, doloribus? Nam eos adipisci, animi, harum necessitatibus laboriosam nihil amet velit in omnis qui maiores maxime sunt.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="images/mango-2.jpg" alt="lots-of-mango">
+            </div>
+            <div class="photo-detail">
+                <h4>Red Mango</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, doloribus? Nam eos adipisci, animi, harum necessitatibus laboriosam nihil amet velit in omnis qui maiores maxime sunt.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    
+</body>
+</html>
